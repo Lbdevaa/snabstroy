@@ -1,17 +1,17 @@
 {
-  "name": "css-grid-html-template",
+  "name": "create-new",
   "version": "2.0.0",
   "description": "Simple css grid Start Template (Sass, Browsersync, Uglify, cleanCSS, Autoprefixer, imageMin)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "dan3439",
+  "author": "dan3439&merakaa",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
