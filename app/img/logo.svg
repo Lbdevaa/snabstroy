@@ -1,0 +1,19 @@
+<svg id="Группа_2" data-name="Группа 2" xmlns="http://www.w3.org/2000/svg" width="270" height="50" viewBox="0 0 270 50">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36.486px;
+        fill: #010101;
+        text-anchor: middle;
+        font-family: "Gotham Pro";
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #ff1329;
+      }
+    </style>
+  </defs>
+  <text id="снабстрой" class="cls-1" transform="translate(164.51 37.5) scale(1.096)">снабстрой</text>
+  <rect id="Прямоугольник_15" data-name="Прямоугольник 15" class="cls-2" width="50" height="50"/>
+</svg>

@@ -3,6 +3,703 @@
 @import "vars"
 @import "base"
 
-// Пользовательские стили
+// Пользовательские стили 
+.header 
+     
+.top-line
+    background-color: #f0f0f0
+    text-align: right
+    padding: em(20px) 0 em(7px) 
+    border-bottom: 1px solid #e0e0e0
+    &__mail, &__work-time
+        display: inline-block
+        color: #333333
+    &__mail
+        margin-right: em(70px)  
+        position: relative
+        font-size: em(14px)
+        &:before
+            content: ''
+            position: absolute
+            top: 7px
+            left: -25px
+            width: 15px
+            height: 12px
+            background-image: url(../img/mail.svg)
+            background-repeat: no-repeat
+            background-size: contain
+    &__work-time
+        margin: 0
+        font-size: em(13px)
+        position: relative
+         
+        &:before
+            content: ''
+            position: absolute
+            top: 3px
+            left: -24px
+            width: 16px
+            height: 16px
+            background-image: url(../img/watch.svg)
+            background-repeat: no-repeat
+            background-size: contain
+.main-btn
+    background: $red
+    border-radius: 5px
+    color: #ffffff
+    text-transform: uppercase
+    font-weight: 800
+    font-size: em(12px)
+    border: 1px solid $red
+    width: max-content
+    padding: em(14px) em(27px)
+    cursor: pointer
+    font-family: $OSEB 
 
+.mid-line
+    grid-template-columns: repeat(5, max-content)
+    grid-column-gap: 33px
+    align-items: center
+    padding: 25px 0
+    &__text
+        font-size: em(14px)
+        margin: 0
+        width: 200px
+        color: #8f8f8f
+    &__call-btn
+        color: $red
+        border: 2px solid $red
+        background: #fff 
+    &__phone
+        font-size: em(18px)
+        text-decoration: none
+        color: #737373 
+        span
+            font-weight: bold
+            color: #010101
+
+.mobile-menu
+    display: none
+    
+    &__list
+        margin: 0
+        padding: 0
+        &:hover 
+            ul
+                display: block
+            .mobile-menu__title::after
+                transform: rotate(90deg)   
+    &__title
+        margin: 0 0 em(20px)
+        position: relative
+        padding: 10px
+        &::after
+            transition: all .5s ease-out
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 20px
+            width: 8px
+            height: 10px
+            background-image: url(../img/formwork__url_arrow-up.svg)
+            background-repeat: no-repeat
+            background-size: contain
+    &__items
+        margin: 0 0 0 em(15px)
+        padding: 0
+        display: none
+    &__item
+        list-style: none
+        
+    &__url
+        text-transform: uppercase
+        text-decoration: none
+        color: #000
+        font-weight: 800
+        font-size: em(16px)
+        line-height: 15px
+        color: #000
+        display: block
+        margin-bottom: em(25px)
+
+    &__list-title
+        list-style: none
+        background-color: #f0f0f0 
+ 
+        
+.main-menu
+    border-top: 1px solid #e6e6e6
+    &__list
+        list-style: none
+        font-size: em(15px)
+        padding: 0
+        display: inline-block
+        margin: 0
+       
+    &__item
+        text-transform: uppercase
+        display: inline-block
+        padding: em(25px) em(25px) 
+        position: relative
+        &:hover::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 2px 
+            border-top: 2px solid $red
+        &:first-of-type 
+            margin-left: em(10px)
+        &:nth-of-type(4)>a 
+            &::before
+                left: -25px
+                position: absolute
+                content: ''
+                width: 18px
+                height: 18px
+                background-image: url(../img/icon-catalog.png)
+                background-repeat: no-repeat
+                background-size: cover
+    &__url
+        text-decoration: none
+        font-weight: 800
+        font-size: em(16px)
+        line-height: 15px
+        color: #000000
+        position: relative
+        &:hover
+            font-family: $OSEB 
+                
+    &__search
+        display: inline-block
+        height: 64px    
+        border-left: 1px solid #e6e6e6
+        padding: em(10px) em(0px)
+    &__seacrh-input-field
+        border: 0
+        height: 100%
+        padding-left: em(30px)
+        text-transform: uppercase
+        font-size: em(15px)
+        font-family: $OSL
+        width: 220px
+    &__icon-search
+        width: 19px
+        height: 19px
+    &__search-btn
+        background: none
+        border: none
+        cursor: pointer
+//carousel
+.main-page__carousel
+    margin-bottom: 55px
+.main-carousel
+    height: 463px
+    
+    border-top: 2px solid #c8c8c8
+    &__bg
+        background: url(../img/slide.png) no-repeat center
+        background-size: cover
+        padding: em(50px) 
+    &__text-box 
+        padding: 0  em(100px)
+    &__title
+        font-size: em(56px)
+        line-height: 64px
+        font-family: $OSEB
+        max-width: 330px
+        margin: 0 0 em(6px) 
+    &__text
+        font-size: em(24px)
+        line-height: 30px
+        font-weight: 300
+        font-family: $OSL
+        max-width: 520px
+        margin: 0
+        padding-bottom: em(20px)
+    &__btn
+        text-decoration: none
+        color: #010101
+        background: none
+        border: 3px solid #010101
+        font-family: $OSEB
+        font-size: em(18px)
+        padding: em(10px) em(33px)
+        display: block
+       
+    .owl-dots
+        position: absolute
+        bottom: 20px
+        left: 50% 
+        transform: translateX(-50%)
+        
+        .owl-dot
+            outline: none
+             
+    .owl-dot.active span, .main-carousel .owl-dot:hover span
+        background-color: #fff
+        width: 14px
+        height: 14px  
+        border-radius: 1000em
+        position: relative
+        &::before
+            content: ''
+            width: 30px
+            height: 30px
+            position: absolute
+            background-image: url(../img/dot-border.png)
+            background-size: cover
+            background-repeat: no-repeat
+            top: -50%
+            // transform: translateY(-50%)
+            transform: translateX(-50%)
+    .owl-dot:focus span, .owl-dot:active span 
+        border: solid 2px #fff
+        &::before
+            top: -100%
+    .owl-dot span 
+        display: block  
+        transition: opacity .2s ease
+        width: 14px
+        height: 14px
+        background-color: #fff
+        margin: 0 10px  
+        border-radius: 1000em
+        background-color: rgba(1, 1, 1, 0.44) 
+        &:hover
+            border: solid 2px $red
+            &::before
+                top: -100%
+    .owl-nav.disabled
+        display: none
+
+.main>.container
+    padding: 0 0 em(55px)
+    display: grid
+    grid-template-columns: max-content 1fr
+    grid-column-gap: 30px
+
+// left-menu
+
+.left-menu
+    // float: left
+    max-width: 270px
+    
+.formwork
+    margin-bottom: 35px 
+    &__title
+        font-size: em(20px)
+        line-height: em(36px)
+        margin: 0 0 em(8px)
+    &__list, &__second-item, &__second-list
+        list-style: none
+        margin: 0
+        padding: 0
+    &__list
+        border: 1px solid #DDD
+    
+    &__item:hover 
+        ul 
+            display: block 
+        .formwork__item-name::after
+            transform: rotate(90deg) 
+    &__item-name
+        margin: 0
+        display: block
+        background-color: #DDDDDD
+        padding: em(14px) em(28px)
+        color: #222222
+        text-decoration: none
+        font-weight: bold
+        position: relative
+        box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.09)
+        cursor: pointer
+        &::after
+            transition: all 0.5s ease-out
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 50px
+            width: 8px
+            height: 10px
+            background-image: url(../img/formwork__url_arrow-up.svg)
+            background-repeat: no-repeat
+            background-size: contain
+    &__second-list
+        display: none
+        padding-top: em(10px)
+        &.active
+            display: block
+            .formwork__item-name::after
+                background-image: url(../img/formwork__url_arrow-down.svg) 
+    &__second-item
+        padding-left: em(30px)
+        margin-bottom: em(16px) 
+    &__second-url
+        color: #585858
+        text-decoration: none
+        font-size: em(14px)
+        &:hover
+            font-weight: 900
+            color: #000
+
+.stocks
+    border: 1px solid #ddd
+    padding: em(18px) em(22px)
+    &__title
+        margin: 0 0 em(16px)
+        font-size: em(18px)
+        line-height: 30px  
+.page-link
+    color: #ff1329
+    font-size: em(14px)
+    font-weight: bold
+    line-height: 30px
+    position: relative
+    text-decoration: none
+    text-transform: uppercase
+    &::after
+        position: absolute
+        content: ''
+        top: 50%
+        left: 110%
+        transform: translateY(-50%)
+        width: 16px
+        height: 12px
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: url(../img/stocks__url_arrow.svg)
+.stock-box
+    &.stock-item
+        margin-bottom: 30px
+    &__img-box
+        background-image: url(../img/stock-img.png)
+        height: 140px
+        background-repeat: no-repeat
+        background-size: cover
+        position: relative
+    &__text
+        background: #EE1529
+        color: #ffffff
+        width: max-content
+        border-radius: 1000em
+        font-size: em(12px)
+        line-height: 24px
+        padding: 0 em(21px)
+        text-align: center
+        margin: 0
+        position: absolute
+        left: 12px
+        top: 12px
+    &__title-box
+        border-top: 2px solid #FE3745
+        background-color: #212121
+        padding: em(14px) em(16px)
+        line-height: 24px
+    &__title
+        font-size: em(18px)
+        color: #ffffff
+        font-weight: 800
+        line-height: 24px
+        font-family: $OSEB
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+// aricle
+
+.article
+    &>.wrap
+        max-width: 875px
+.section-title
+    margin: 0
+    font-size: em(24px)
+    font-weight: 800
+    line-height: 30px
+    font-family: $OSEB
+
+.main-directions 
+    grid-template-columns: 1fr 1fr 
+    grid-column-gap: 30px
+    grid-row-gap: 10px
+    margin-bottom: 50px
+    &__title
+        margin-bottom: em(20px)
+        grid-column: 1/3
+
+.direction-box
+    position: relative
+    background-image: url(../img/direction1.png)
+    background-size: cover
+    background-repeat: no-repeat
+    height: 345px 
+    box-shadow: 0px 5px 5px 1px #E0E0E0
+    &:nth-of-type(2)
+        background-image: url(../img/direction2.png)
+        
+    &__icon
+        top: -35px
+        right: 18px
+        height: 71px
+        width: 71px
+        position: absolute   
+    &__text-box
+        background-color: #626262
+        padding: 22px 102px 22px 22px
+        position: absolute
+        bottom: 0
+    &__title
+        color: #ffffff
+        font-size: em(18px)
+        font-family: $OSEB
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    &__text
+        color: #ffffff
+        font-size: em(14px)
+        margin: 0 0 em(10px)
+        line-height: 21px 
+
+// seo
+.seo
+    grid-template-columns: repeat(3,1fr)
+    grid-column-gap: 55px
+    border-bottom: 3px solid $red
+    
+    &__title
+        grid-column: 1/4
+        overflow: hidden
+        text-align: center
+        margin-bottom: em(30px) 
+        &::before, &::after
+            content: ''
+            display: inline-block
+            vertical-align: middle
+            box-sizing: border-box
+            height: 3px
+            background: $red
+            width: 100%
+            border: solid #ffffff
+            border-width: 0 20px
+        &::before
+            margin-left: -100%
+        &::after
+            margin-right: -100%
+
+            
+.seo-box
+    &__title
+        font-size: em(18px)
+        font-family: $OSEB
+        margin: 0 auto em(30px) auto
+        max-width: 140px
+        text-align: center 
+        position: relative
+        &::before
+            content: ''
+            bottom: -20px
+            left: 50%
+            transform: translateX(-50%)
+            width: 43px
+            height: 5px
+            background-color: $red
+            position: absolute 
+    &__text
+        margin: 0 auto
+        font-size: em(14px)
+        font-family: $OSL
+        line-height: 24px
+        color: #555555
+        text-align: center
+    &__img
+        margin: auto auto 20px
+        width: 55px
+        height: 55px  
+.main-page__seo-box
+    padding-bottom: 55px
+
+.main-page__seo
+    margin-bottom: 45px
+//service
+.main-page__services
+    margin-bottom: 55px
+.services
+    grid-template-columns: repeat(3, 1fr) 
+    grid-column-gap: 35px
+.service-box
+    background-color: #f3f3f3
+    // max-width: 273px
+    border-bottom: 2px solid #c2c2c2
+    border-radius: 3px
+    &__img 
+        // object-fit: cover
+        width: 100%
+    &__text-box
+        padding: 20px
+    &__title
+        font-family: $OSEB
+        font-size: em(16px)
+        line-height: 24px
+        margin: 0 0 em(10px)
+        &_second
+            margin-top: em(30px)
+    &__text
+        text-decoration: none
+        display: block
+        color: #000000
+        margin: 0 0 em(12px)
+        font-size: em(13px)
+        &:last-of-type 
+            // margin-bottom: 20px
+
+
+//about-section
+.main-page__about-section
+    margin-bottom: 32px
+.about-section
+    &__title
+        margin-bottom: em(14px)
+    &__text
+        margin: 0 0 em(22px)
+        font-size: em(18px)
+        max-width: 875px
+        line-height: 24px
+    &__url-text
+        color: $red
+
+
+// objects
+.objects
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 30px
+    &__section-title
+        grid-column: 1/4
+        overflow: hidden
+        text-align: center
+        margin-bottom: em(30px) 
+        &::before, &::after
+            content: ''
+            display: inline-block
+            vertical-align: middle
+            box-sizing: border-box
+            height: 1px
+            background: #121212
+            width: 100%
+            border: solid #ffffff
+            border-width: 0 20px
+        &::before
+            margin-left: -100%
+        &::after
+            margin-right: -100%
+    &__url
+        grid-column: 1/4
+        justify-self: end
+        padding-right: 30px
+        &::after
+            // left: 5px
+            right: 5px
+            left: auto
+.object-box
+
+    &__img
+        margin-bottom: 18px
+        max-height: 172px
+        width: 100%
+        object-fit: cover
+        // max-width: 272px
+    &__title
+        font-family: $OSEB
+        font-size: em(18px)
+        line-height: 24px
+        margin: 0 0 em(4px)
+        text-decoration: none
+        color: #000000
+        &:hover
+            text-decoration: underline
+    &__text
+        font-family: $OSL
+        max-width: 270px
+        font-size: em(13px)
+        margin: 0 0 em(22px)
+    
+//footer
+
+.footer
+    background-color: #1B1B1B
+    &>div
+        grid-template-columns: repeat(4, max-content)
+        grid-column-gap: 78px
+        display: grid
+        padding: 40px 0 
+.logo-box
+    &__img
+        margin: 10px 0
+    &__text
+        font-size: em(14px)
+        line-height: 18px
+        margin: 0
+        max-width: 150px
+        color: #6B6B6B
+
+.footer-menu
+    &__title
+        margin: 0 
+        font-size: em(14px) 
+        line-height: 30px
+    &__list
+        color: #b3b3b3
+        list-style: none
+        padding: 0
+        margin: 0
+        text-transform: uppercase
+        margin-bottom: em(20px) 
+    &__item
+        line-height: 30px
+    &__url
+        text-decoration: none
+        color: #6B6B6B
+        text-transform: none
+.footer-contacts
+    &__title
+        text-transform: uppercase
+        color: #b3b3b3
+        font-size: em(14px)
+        margin: 0 0 em(5px)
+    &__adress
+        color: #6b6b6b
+        margin: 0 0 em(5px)
+    &__mail
+        color: #6b6b6b
+        margin: 0 0 em(24px)
+        display: block
+    &__phone
+        display: block
+        color: #b3b3b3
+        font-size: em(22px)
+        text-decoration: none
+        margin: 0  
+    &__work-time
+        color: #6b6b6b
+        margin: 0
+        margin: 0 0 em(14px)
+    &__order
+        color: #ffffff
+        font-weight: bold
+
+.footer-price
+    max-width: 320px
+    &__title
+        text-transform: uppercase
+        color: #b3b3b3
+        font-size: em(14px)
+        margin: 0 0 em(15px)
+    &__text
+        color: #6b6b6b 
+        font-size: em(13px)
+        margin: 0 0 em(20px)
+        max-width: 250px
 @import "media" // Всегда в конце
