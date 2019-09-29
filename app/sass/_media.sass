@@ -12,26 +12,227 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-	/**/
+	.mid-line
+		grid-template-columns: repeat(4, max-content)
+		grid-column-gap: 25px
+		&__phone
+			grid-column: 4/5
+	.direction-box
+		grid-column: 2 span
+	.main-menu__search
+		border: none
+	.main>.container
+		grid-column-gap: 20px
+		padding: 0 20px 55px
+	.article>.wrap
+		max-width: 700px
+	.services
+		grid-column-gap: 20px
+	.objects
+		grid-template-columns: repeat(2, 1fr)
+		grid-column-gap: 20px
+		&__section-title, &__url
+			grid-column: 1/3
+	.footer>div
+		grid-column-gap: 20px
+		padding: 40px 20px 
+	.footer-price
+		max-width: min-content
+		/**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
+	.main
+		// padding: 0 20px
+	.main-menu
+		display: inline-block
+	.main-btn
+		font-size: em(10px)
+	.mid-line
+		grid-template-columns: repeat(3, max-content)
+		grid-row-gap: 10px 
+		&__call-btn
+			grid-column: 2/3
+		&__phone
+			grid-column: 3/4
+			justify-self: end
+	.main-carousel__text-box
+		padding: 0
+	.main-carousel .owl-dots
+		bottom: 35px
+	.main-menu
+		&__list
+			display: inline
+		&__search
+			float: right
+		&__item:first-of-type
+			margin-left: 0
+	.article
+		// max-width: 475px
+
+	.footer-price
+		display: none
+	.footer>div
+		grid-column-gap: 40px
+		grid-template-columns: repeat(3,max-content)
+		
 	/**/
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 767px)
+@media only screen and (max-width : 768px)
+	.mid-line
+		grid-template-columns: repeat(2, max-content)
+		grid-column-gap: 0
+		justify-content: space-around
+
+		&__logo
+			grid-column: 2 span
+		&__text
+			grid-column: 2 span
+		&__call-btn
+			grid-column: 1 span
+		&__phone
+			grid-column: 2 span
+	
+	.main-carousel
+		&__title
+			font-size: em(45px)
+		&__bg
+			padding: em(50px) em(30px)
+	.main-carousel .owl-dots
+		// bottom: 10px
+	.main>.container
+		grid-template-columns: 1fr
+		grid-row-gap: 20px
+	.article>.wrap
+		max-width: 100%
+
+	.main-directions
+		grid-template-columns: 1fr
+		&__title
+			grid-column: 1 span
+	.direction-box
+		grid-column: 1 span
+	.footer-menu
+		display: none
+	.footer>div
+		grid-template-columns: 1fr
+		grid-row-gap: 30px
+	.stock-box__img-box
+		height: 30vh
+	.footer-contacts
+		max-width: 300px
+	.services
+		grid-template-columns: 1fr
+	.main-menu
+		// display: none
+		&__item
+			padding: 5px
+			margin-right: 18px
+		&__url
+			font-size: 10px
+	.main-menu
+		&__search
+			height: 35px
+			padding: 5px
+		&__seacrh-input-field
+			font-size: em(12px)
+			max-width: 110px
+	 
+	.service-box__text-box
+		padding: em(20px) em(40px)
+	.left-menu
+		max-width: 100%
 	/**/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	.mid-line
+		justify-content: space-between
+	.main-btn
+		padding: 6px 6px
+	.top-line
+		&__mail
+			float: left
+			margin-left: em(40px)
+			font-size: em(10px)
+			line-height: 3
+			&::before
+				top: 10px
+		&__work-time
+			font-size: em(10px)
+			&::before
+				top: 0
+	.main-menu
+		&__item
+			// display: block
+		&__search
+			width: 100% 
+		&__seacrh-input-field
+			max-width: 100%
+			text-align: center
+			padding: 0
+			margin-right: 10px
+	.seo__title::after, .seo__title::before
+		display: none
+	.main-menu
+		padding: 0 20px
+		&__item
+			margin-right: 30px
+	.main-page__carousel
+		margin-bottom: 20px
+	.main-carousel
+		&__text
+			font-size: em(18px)
+		&__title
+			font-size: em(32px)
+			max-width: 280px
+	.main-carousel .owl-dots
+		bottom: 0px
+	.main-carousel__btn
+		margin-bottom: 60px
+	.main>.container
+		grid-template-columns: 1fr
+	.seo
+		grid-template-columns: 1fr
+		&__title
+			grid-column: 1 span
+	.objects
+		grid-template-columns: 1fr
+		&__section-title, &__url
+			grid-column: auto
+	 
 	/**/
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
+	.mid-line
+		grid-template-columns: 1fr
+		&__logo, &__text, &__call-btnm, &__phone
+			grid-column: auto
+		&__phone
+			justify-self: start
+	.mobile-menu
+		display: inline-block
+	.main-menu
+		display: none
+		margin-bottom: 10px
+		&__item
+			display: block
+	.main-menu__seacrh-input-field
+		max-width: 75%
+	.main-carousel
+		height: 400px
+		&__bg
+			padding: 20px 10px
+		&__title
+			line-height: 1.5
+	.main-carousel .owl-dots 
+		bottom: 10px
 	/**/
 
 
